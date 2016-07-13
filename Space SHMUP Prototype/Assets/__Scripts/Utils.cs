@@ -179,4 +179,29 @@ public class Utils : MonoBehaviour {
 
 		return (Vector3.zero);
 	}
+
+//============================ Transform Functions ============================\\
+
+	// this function will iteratively climb up the transform.parent tree unitl it 
+	//either finds a parent with a tag != "Untagged" or no parent
+	public static GameObject FindTaggedParent (GameObject go) {		// 1. see pg 514
+		// if this gameObject has a tag
+		if (go.tag != "Untagged") {									// 2. see pg 514
+			// then return this gameObject
+			return(go);
+		}
+		// if there is no parent of this transform
+		if (go.transform.parent == null) {							// 3. see pg 514
+			// we've reached the top of the hierarchy with no interesting tag
+			// so return null
+			return(null);
+		}
+		// otherwise, recursively climb up the tree
+		return (FindTaggedParent (go.transform.parent.gameObject));	// 4. see pg 514
+	}
+	// this version of the function handles things if a Transform is passed in
+	public static GameObject FindTaggedParent (Transform t) {		// 5. see pg 514
+		return (FindTaggedParent (t.gameObject));
+	}
+
 }

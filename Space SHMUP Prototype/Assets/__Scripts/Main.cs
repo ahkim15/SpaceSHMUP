@@ -38,4 +38,14 @@ public class Main : MonoBehaviour {
 		Invoke ("SpawnEnemy", enemySpawnRate);						// 3. see pg 510
 	}
 
+	public void DelayedRestart (float delay) {
+		// invoke the Restart () method in the delay seconds
+		Invoke ("Restart", delay);
+	}
+
+	public void Restart () {
+		// reload _Scene_0 to restart the game
+		Application.LoadLevel ("_Scene_0");
+	}
+
 }
