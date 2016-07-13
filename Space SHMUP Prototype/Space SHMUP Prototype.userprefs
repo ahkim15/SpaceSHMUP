@@ -1,9 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/__Scripts/Shield.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/__Scripts/Enemy.cs">
     <Files>
-      <File FileName="Assets/__Scripts/Hero.cs" Line="34" Column="3" />
-      <File FileName="Assets/__Scripts/Shield.cs" Line="20" Column="41" />
+      <File FileName="Assets/__Scripts/Hero.cs" Line="21" Column="1" />
+      <File FileName="Assets/__Scripts/Shield.cs" Line="1" Column="1" />
+      <File FileName="Assets/__Scripts/Utils.cs" Line="1" Column="1" />
+      <File FileName="Assets/__Scripts/Enemy.cs" Line="58" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
