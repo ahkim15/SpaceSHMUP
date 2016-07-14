@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour {
 	public float	health = 10;
 	public int		score = 100;				// points earned for destroying this
 	public int		showDamageForFrames = 2;	// # frams to show damage
+	public float	powerUpDropChance = 1f;		// chance to drop a power-up
 
 	public bool ________________;
 
@@ -92,6 +93,8 @@ public class Enemy : MonoBehaviour {
 			// get the damage amount from the Projectile.type & Main.W_DEFS
 			health -= Main.W_DEFS[p.type].damageOnHit;
 			if (health <= 0) {
+				// tell the main singleton that this ship has been destroyed
+				Main.S.ShipDestroyed(this);
 				// destroy this enemy
 				Destroy (this.gameObject);
 			}
